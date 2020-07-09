@@ -1,0 +1,43 @@
+#include "resource.h"
+
+IDI_ICON1               ICON    DISCARDABLE     "GarantEegStreamer.ico"
+
+# if defined(UNDER_CE)
+#  include <winbase.h>
+# else
+#  include <windows.h>
+# endif
+
+VS_VERSION_INFO VERSIONINFO
+    FILEVERSION VER_FILEVERSION
+	PRODUCTVERSION VER_FILEVERSION
+	FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+	FILEFLAGS VS_FF_DEBUG
+#else
+	FILEFLAGS 0x0L
+#endif
+	FILEOS VOS__WINDOWS32
+	FILETYPE VFT_DLL
+	FILESUBTYPE 0x0L
+	BEGIN
+		BLOCK "StringFileInfo"
+		BEGIN
+			BLOCK "040904b0"
+			BEGIN
+                VALUE "CompanyName", "Neurotrend\0"
+                VALUE "FileDescription", "Garant EEG channels data streamer\0"
+				VALUE "FileVersion", VER_FILEVERSION_STR
+                VALUE "InternalName", "GarantEegStreamer\0"
+                VALUE "LegalCopyright", "Copyright 2019 by Neurotrend\0"
+                VALUE "OriginalFilename", "GarantEegStreamer.exe\0"
+                VALUE "ProductName", "GarantEegStreamer\0"
+				VALUE "ProductVersion", VER_FILEVERSION_STR
+			END
+		END
+		BLOCK "VarFileInfo"
+		BEGIN
+			VALUE "Translation", 0x0409, 1200
+		END
+	END
+/* End of Version info */
