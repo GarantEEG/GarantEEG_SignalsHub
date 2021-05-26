@@ -23,9 +23,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11
 
-include("$$PWD/../../components/graph/graph.pri")
-INCLUDEPATH += $$PWD/../../components/graph/
-
 include("$$PWD/../GarantEEG_API/GarantEEG_API.pri")
 INCLUDEPATH += $$PWD/../GarantEEG_API/
 
